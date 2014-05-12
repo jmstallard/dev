@@ -5,6 +5,7 @@ def cmd = "curl http://headers.jsontest.com"
 def proc = cmd.execute()
 proc.waitFor()
 def myHeader = "${proc.in.text}"
-def stuff = new groovy.json.JsonSlurper().parseText('$myHeader')
-println "stuff host= $stuff.Host"
+def stuff = new groovy.json.JsonSlurper().parseText(myHeader)
+println "stuff =" +  stuff
+println "stuff host=" +  stuff.Host
 }
