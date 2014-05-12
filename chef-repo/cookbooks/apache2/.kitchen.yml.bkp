@@ -1,0 +1,13 @@
+driver:
+  name: docker
+
+platforms:
+- name: ubuntu
+  run_list:
+  - recipe[apt]
+- name: centos
+  driver_config:
+    image: centos
+    platform: rhel
+  run_list:
+  - recipe[apache2::default]

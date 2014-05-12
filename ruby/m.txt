@@ -1,0 +1,2 @@
+joe smith, group1
+john doe, group2

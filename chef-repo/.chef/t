@@ -1,0 +1,92 @@
+Error: invalid option: --sudo
+USAGE: knife ec2 server create (options)
+        --associate-eip IP_ADDRESS   Associate existing elastic IP address with instance after launch
+        --associate-public-ip        Associate public ip to VPC instance.
+        --windows-auth-timeout MINUTES
+                                     The maximum time in minutes to wait to for authentication over the transport to the node to succeed. The default value is 25 minutes.
+    -Z, --availability-zone ZONE     The Availability Zone
+    -A, --aws-access-key-id KEY      Your AWS Access Key ID
+        --aws-credential-file FILE   File containing AWS credentials as used by aws cmdline tools
+    -K SECRET,                       Your AWS API Secret Access Key
+        --aws-secret-access-key
+        --user-data USER_DATA_FILE   The EC2 User Data file to provision the instance with
+        --bootstrap-protocol protocol
+                                     protocol to bootstrap windows servers. options: winrm/ssh
+        --bootstrap-proxy PROXY_URL  The proxy server for the node being bootstrapped
+        --bootstrap-version VERSION  The version of Chef to install
+        --ca-trust-file CA_TRUST_FILE
+                                     The Certificate Authority (CA) trust file used for SSL transport
+    -N, --node-name NAME             The Chef node name for your new node
+        --server-url URL             Chef Server URL
+        --chef-zero-host HOST        Host to start chef-zero on
+        --chef-zero-port PORT        Port (or port range) to start chef-zero on.  Port ranges like 1000,1010 or 8889-9999 will try all given ports until one works.
+    -k, --key KEY                    API Client Key
+        --[no-]color                 Use colored output, defaults to false on Windows, true otherwise
+    -c, --config CONFIG              The configuration file to use
+        --dedicated_instance         Launch as a Dedicated instance (VPC ONLY)
+        --defaults                   Accept default values for all questions
+        --disable-editing            Do not open EDITOR, just accept the data as is
+    -d, --distro DISTRO              Bootstrap a distro using a template; default is 'chef-full'
+        --ebs-no-delete-on-term      Do not delete EBS volume on instance termination
+        --ebs-optimized              Enabled optimized EBS I/O
+        --provisioned-iops IOPS      IOPS rate, only used when ebs volume type is 'io1'
+        --ebs-size SIZE              The size of the EBS volume in GB, for EBS-backed instances
+        --ebs-volume-type TYPE       Standard or Provisioned (io1) IOPS or General Purpose (gp2)
+    -e, --editor EDITOR              Set the editor to use for interactive commands
+    -E, --environment ENVIRONMENT    Set the Chef environment (except for in searches, where this will be flagrantly ignored)
+        --ephemeral EPHEMERAL_DEVICES
+                                     Comma separated list of device locations (eg - /dev/sdb) to map ephemeral devices
+    -f, --flavor FLAVOR              The flavor of server (m1.small, m1.medium, etc)
+    -F, --format FORMAT              Which format to use for output
+        --fqdn FQDN                  Pre-defined FQDN
+        --hint HINT_NAME[=HINT_FILE] Specify Ohai Hint to be set on the bootstrap target.  Use multiple --hint options to specify multiple hints.
+        --[no-]host-key-verify       Verify host key, enabled by default.
+        --iam-profile NAME           The IAM instance profile to apply to this instance.
+        --identity-file IDENTITY_FILE
+                                     The SSH identity file used for authentication
+    -I, --image IMAGE                The AMI for the server
+    -j, --json-attributes JSON       A JSON string to be added to the first run of chef-client
+    -i, --keytab-file KEYTAB_FILE    The Kerberos keytab file used for authentication
+    -R KERBEROS_REALM,               The Kerberos realm used for authentication
+        --kerberos-realm
+        --kerberos-service KERBEROS_SERVICE
+                                     The Kerberos service used for authentication
+        --[no-]listen                Whether a local mode (-z) server binds to a port
+    -z, --local-mode                 Point knife commands at local repository instead of server
+    -u, --user USER                  API Client Username
+        --placement-group PLACEMENT_GROUP
+                                     The placement group to place a cluster compute instance
+        --prerelease                 Install the pre-release chef gems
+        --print-after                Show the data after a destructive operation
+        --private-ip-address IP-ADDRESS
+                                     allows to specify the private IP address of the instance in VPC mode
+        --region REGION              Your AWS region
+    -r, --run-list RUN_LIST          Comma separated list of roles/recipes to apply
+        --s3-secret S3_SECRET_URL    S3 URL (e.g. s3://bucket/file) for the encrypted_data_bag_secret_file
+        --secret                     The secret key to use to encrypt data bag item values
+        --secret-file SECRET_FILE    A file containing the secret key to use to encrypt data bag item values
+    -g, --security-group-ids X,Y,Z   The security group ids for this server; required when using VPC
+    -G, --groups X,Y,Z               The security groups for this server; not allowed when using VPC
+    -a ATTRIBUTE,                    The EC2 server attribute to use for SSH connection. Use this attr for creating VPC instances along with --associate-eip
+        --server-connect-attribute
+    -w, --ssh-gateway GATEWAY        The ssh gateway server. Any proxies configured in your ssh config are automatically used by default.
+        --ssh-gateway-identity IDENTITY_FILE
+                                     The private key for ssh gateway server
+    -S, --ssh-key KEY                The AWS SSH key id
+        --ssh-password PASSWORD      The ssh password
+        --ssh-port PORT              The ssh port
+        --ssh-user USERNAME          The ssh username
+    -s, --subnet SUBNET-ID           create node in this Virtual Private Cloud Subnet ID (implies VPC mode)
+    -T Tag=Value[,Tag=Value...],     The tags for this server
+        --tags
+        --template-file TEMPLATE     Full path to location of template to use
+        --use-iam-profile            Use IAM profile assigned to current machine
+        --validation-key-url URL     Path to the validation key
+    -V, --verbose                    More verbose output. Use twice for max verbosity
+    -v, --version                    Show chef version
+    -P, --winrm-password PASSWORD    The WinRM password
+    -p, --winrm-port PORT            The WinRM port, by default this is 5985
+    -t, --winrm-transport TRANSPORT  The WinRM transport type.  valid choices are [ssl, plaintext]
+    -x, --winrm-user USERNAME        The WinRM username
+    -y, --yes                        Say yes to all prompts for confirmation
+    -h, --help                       Show this message

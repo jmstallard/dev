@@ -1,0 +1,14 @@
+class List
+   def p(*args)
+      if args.length == 1
+	return args.to_s
+      else
+	print args.shift
+         self.p(args)
+      end
+   end
+end
+
+#p("a","b","c")
+l = List.new
+l.p("a","b","c","d")
