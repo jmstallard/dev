@@ -1,5 +1,6 @@
-
-
+// this is a program that converts Farenheit to Celsius
+// and vis-a-versa
+// I think this blank line was here before.
 puts "Enter degrees:"
 d = gets.chomp
 puts "Enter F/C:"
