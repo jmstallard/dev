@@ -1,0 +1,14 @@
+
+
+task a << {
+println "in task a"
+println "variable v=${v}"
+}
+
+task b << { 
+
+project.ext.set("v","hello there")
+println "in task b\nvariable v=$v"
+
+}
+

@@ -1,12 +1,17 @@
+
 // Hey, I just updated this via emacs
 // cool.
 
+
+
+
 task test {
 def cmd = "curl  http://headers.jsontest.com"
-def proc = cmd.execute()
+def pro
 proc.waitFor()
 def myHeader = "${proc.in.text}"
-def stuff = new groovy.json.JsonSlurper().parseText(myHeader)
+def stuff = new groovy.json.JsonSlurper().
+    parseText(myHeader)
 println "stuff host= $stuff.Host"
 println "stuff = " + myHeader
 }

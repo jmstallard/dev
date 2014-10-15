@@ -1,0 +1,14 @@
+
+task test {
+println "${project}"
+
+}
+
+
+task mc (type:Copy) {
+
+from '../ruby'
+into 'mydir'
+}
+
+

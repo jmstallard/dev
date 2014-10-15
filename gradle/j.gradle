@@ -1,5 +1,4 @@
-// Hey, I just updated this via emacs
-// cool.
+
 
 task test {
 def cmd = "curl  http://headers.jsontest.com"
