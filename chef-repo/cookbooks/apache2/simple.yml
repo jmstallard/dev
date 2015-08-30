@@ -1,0 +1,5 @@
+suites:
+  - name: default
+    run_list:
+      - recipe[apache2::default]
+    attributes:

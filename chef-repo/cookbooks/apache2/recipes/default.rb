@@ -198,24 +198,56 @@ template "#{node['apache']['dir']}/sites-available/default" do
   notifies :restart, 'service[apache2]'
 end
 
-cookbook_file "#{node['apache']['docroot_dir']}/index.html" do
-  source 'index.html'
-  mode '0755'
-  owner 'root'
-  group node['apache']['root_group']
-end
+#cookbook_file "#{node['apache']['docroot_dir']}/index.html" do
+#  source 'index.html'
+ # mode '0755'
+  #owner 'root'
+  #group node['apache']['root_group']
+#end
+
+  node['apache']['sites'].each do |site_name,site_data|
+    document_root = "#{node['apache']['docroot_dir']}/#{site_name}"
+
+  template "#{node['apache']['dir']}/conf.d/#{site_name}.conf" do
+    source "custom.erb"
+    mode "0644"
+    variables(
+              :document_root => document_root,
+              :port => site_data["port"]
+              )
+    notifies :restart, 'service[apache2]'
+  end
+    directory document_root do
+      mode "0755"
+      recursive true
+    end
+
+    template "#{document_root}/index.html" do
+      source "index.html.erb"
+      mode "0644"
+      variables(
+          :site_name => site_name,
+          :port => site_data['port']
+      )
+    end
+  end
 
 node['apache']['default_modules'].each do |mod|
   module_recipe_name = mod =~ /^mod_/ ? mod : "mod_#{mod}"
   include_recipe "apache2::#{module_recipe_name}"
 end
 
-iptables_rule 'http' do
-	action :enable
-end
+
+#iptables_rule 'http' do
+#	action :enable
+#end
 
 apache_site 'default' do
   enable node['apache']['default_site_enabled']
+end
+
+node['apache']['sites'].each do |site_name, site_data |
+    document_root= "/var/www/#{site_name}"
 end
 
 service 'apache2' do

@@ -1,0 +1,7 @@
+name             'nc'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures nc'
+long_description 'Installs/Configures nc'
+version          '0.1.0'

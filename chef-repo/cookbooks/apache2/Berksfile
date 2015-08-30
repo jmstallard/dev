@@ -1,0 +1,7 @@
+source "https://supermarket.chef.io"
+
+metadata
+
+
+cookbook 'iptables', :path => '../iptables-master'
+cookbook 'nc', :path => '../nc'

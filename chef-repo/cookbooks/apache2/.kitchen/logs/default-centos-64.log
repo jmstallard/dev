@@ -1,0 +1,16 @@
+I, [2015-08-29T23:28:22.868142 #2596]  INFO -- default-centos-64: -----> Setting up <default-centos-64>...
+I, [2015-08-29T23:28:22.870569 #2596]  INFO -- default-centos-64: Finished setting up <default-centos-64> (0m0.00s).
+I, [2015-08-29T23:28:22.870708 #2596]  INFO -- default-centos-64: -----> Verifying <default-centos-64>...
+I, [2015-08-29T23:28:22.871688 #2596]  INFO -- default-centos-64: Preparing files for transfer
+I, [2015-08-29T23:28:23.738413 #2596]  INFO -- default-centos-64: -----> Busser installation detected (busser)
+I, [2015-08-29T23:28:23.738543 #2596]  INFO -- default-centos-64: Installing Busser plugins: busser-bats
+I, [2015-08-29T23:28:26.586298 #2596]  INFO -- default-centos-64: Plugin bats already installed
+I, [2015-08-29T23:28:27.256103 #2596]  INFO -- default-centos-64: Removing /tmp/verifier/suites/bats
+I, [2015-08-29T23:28:27.284430 #2596]  INFO -- default-centos-64: Transferring files to <default-centos-64>
+I, [2015-08-29T23:28:27.999786 #2596]  INFO -- default-centos-64: -----> Running bats test suite
+I, [2015-08-29T23:28:28.846489 #2596]  INFO -- default-centos-64: [1G   Apace2 is up and running[K[77G1/3[2G[1G ✓ Apace2 is up and running[K
+I, [2015-08-29T23:28:29.063183 #2596]  INFO -- default-centos-64: [1G ✓ Server accepts HTTP requests[K
+I, [2015-08-29T23:28:29.171935 #2596]  INFO -- default-centos-64: [1G ✓ Server accepts HTTP requests[K
+I, [2015-08-29T23:28:29.172028 #2596]  INFO -- default-centos-64: [0m
+I, [2015-08-29T23:28:29.172063 #2596]  INFO -- default-centos-64: 3 tests, 0 failures
+I, [2015-08-29T23:28:29.273636 #2596]  INFO -- default-centos-64: Finished verifying <default-centos-64> (0m6.40s).
