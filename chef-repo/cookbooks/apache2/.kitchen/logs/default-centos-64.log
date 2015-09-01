@@ -1,16 +1,147 @@
-I, [2015-08-29T23:28:22.868142 #2596]  INFO -- default-centos-64: -----> Setting up <default-centos-64>...
-I, [2015-08-29T23:28:22.870569 #2596]  INFO -- default-centos-64: Finished setting up <default-centos-64> (0m0.00s).
-I, [2015-08-29T23:28:22.870708 #2596]  INFO -- default-centos-64: -----> Verifying <default-centos-64>...
-I, [2015-08-29T23:28:22.871688 #2596]  INFO -- default-centos-64: Preparing files for transfer
-I, [2015-08-29T23:28:23.738413 #2596]  INFO -- default-centos-64: -----> Busser installation detected (busser)
-I, [2015-08-29T23:28:23.738543 #2596]  INFO -- default-centos-64: Installing Busser plugins: busser-bats
-I, [2015-08-29T23:28:26.586298 #2596]  INFO -- default-centos-64: Plugin bats already installed
-I, [2015-08-29T23:28:27.256103 #2596]  INFO -- default-centos-64: Removing /tmp/verifier/suites/bats
-I, [2015-08-29T23:28:27.284430 #2596]  INFO -- default-centos-64: Transferring files to <default-centos-64>
-I, [2015-08-29T23:28:27.999786 #2596]  INFO -- default-centos-64: -----> Running bats test suite
-I, [2015-08-29T23:28:28.846489 #2596]  INFO -- default-centos-64: [1G   Apace2 is up and running[K[77G1/3[2G[1G ✓ Apace2 is up and running[K
-I, [2015-08-29T23:28:29.063183 #2596]  INFO -- default-centos-64: [1G ✓ Server accepts HTTP requests[K
-I, [2015-08-29T23:28:29.171935 #2596]  INFO -- default-centos-64: [1G ✓ Server accepts HTTP requests[K
-I, [2015-08-29T23:28:29.172028 #2596]  INFO -- default-centos-64: [0m
-I, [2015-08-29T23:28:29.172063 #2596]  INFO -- default-centos-64: 3 tests, 0 failures
-I, [2015-08-29T23:28:29.273636 #2596]  INFO -- default-centos-64: Finished verifying <default-centos-64> (0m6.40s).
+I, [2015-08-31T22:17:23.614214 #4233]  INFO -- default-centos-64: -----> Converging <default-centos-64>...
+I, [2015-08-31T22:17:23.615089 #4233]  INFO -- default-centos-64: Preparing files for transfer
+I, [2015-08-31T22:17:23.615228 #4233]  INFO -- default-centos-64: Preparing dna.json
+I, [2015-08-31T22:17:23.615755 #4233]  INFO -- default-centos-64: Resolving cookbook dependencies with Berkshelf 3.3.0...
+I, [2015-08-31T22:17:24.730647 #4233]  INFO -- default-centos-64: Removing non-cookbook files before transfer
+I, [2015-08-31T22:17:24.758456 #4233]  INFO -- default-centos-64: Preparing validation.pem
+I, [2015-08-31T22:17:24.759801 #4233]  INFO -- default-centos-64: Preparing client.rb
+I, [2015-08-31T22:17:25.187084 #4233]  INFO -- default-centos-64: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-08-31T22:17:25.398651 #4233]  INFO -- default-centos-64: Transferring files to <default-centos-64>
+I, [2015-08-31T22:17:28.513402 #4233]  INFO -- default-centos-64: Starting Chef Client, version 12.4.1
+I, [2015-08-31T22:17:31.938128 #4233]  INFO -- default-centos-64: [2015-09-01T02:17:29+00:00] WARN: Child with name 'dna.json' found in multiple directories: /tmp/kitchen/dna.json and /tmp/kitchen/dna.json
+I, [2015-08-31T22:17:31.989767 #4233]  INFO -- default-centos-64: resolving cookbooks for run list: ["nc::default", "apache2::default"]
+I, [2015-08-31T22:17:32.705605 #4233]  INFO -- default-centos-64: Synchronizing Cookbooks:
+I, [2015-08-31T22:17:32.712022 #4233]  INFO -- default-centos-64:   - nc
+I, [2015-08-31T22:17:32.817670 #4233]  INFO -- default-centos-64:   - apache2
+I, [2015-08-31T22:17:32.817767 #4233]  INFO -- default-centos-64: Compiling Cookbooks...
+I, [2015-08-31T22:17:32.901610 #4233]  INFO -- default-centos-64: [2015-09-01T02:17:29+00:00] WARN: Cloning resource attributes for service[apache2] from prior resource (CHEF-3694)
+I, [2015-08-31T22:17:32.901704 #4233]  INFO -- default-centos-64: [2015-09-01T02:17:29+00:00] WARN: Previous service[apache2]: /tmp/kitchen/cache/cookbooks/apache2/recipes/default.rb:24:in `from_file'
+I, [2015-08-31T22:17:32.901740 #4233]  INFO -- default-centos-64: [2015-09-01T02:17:29+00:00] WARN: Current  service[apache2]: /tmp/kitchen/cache/cookbooks/apache2/recipes/default.rb:253:in `from_file'
+I, [2015-08-31T22:17:32.901775 #4233]  INFO -- default-centos-64: Converging 81 resources
+I, [2015-08-31T22:17:32.901808 #4233]  INFO -- default-centos-64: Recipe: nc::default
+I, [2015-08-31T22:17:35.922564 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:35.925048 #4233]  INFO -- default-centos-64: Recipe: apache2::default
+I, [2015-08-31T22:17:35.931937 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.152109 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.158686 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.164977 #4233]  INFO -- default-centos-64:   * yum_package[perl] action install (up to date)
+I, [2015-08-31T22:17:36.189115 #4233]  INFO -- default-centos-64:   * cookbook_file[/usr/local/bin/apache2_module_conf_generate.pl] action create (up to date)
+I, [2015-08-31T22:17:36.195225 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.197002 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.203867 #4233]  INFO -- default-centos-64:   * directory[/etc/httpd/mods-available] action create (up to date)
+I, [2015-08-31T22:17:36.207888 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.212465 #4233]  INFO -- default-centos-64:  (skipped due to action :nothing)
+I, [2015-08-31T22:17:36.222591 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.228504 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.238689 #4233]  INFO -- default-centos-64:   * template[/usr/sbin/a2enmod] action create (up to date)
+I, [2015-08-31T22:17:36.245531 #4233]  INFO -- default-centos-64:   * template[/usr/sbin/a2dismod] action create (up to date)
+I, [2015-08-31T22:17:36.251751 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/conf.d/proxy_ajp.conf] action delete (up to date)
+I, [2015-08-31T22:17:36.251870 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/conf.d/auth_pam.conf] action delete (up to date)
+I, [2015-08-31T22:17:36.251909 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/conf.d/authz_ldap.conf] action delete (up to date)
+I, [2015-08-31T22:17:36.251946 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/conf.d/webalizer.conf] action delete (up to date)
+I, [2015-08-31T22:17:36.252012 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/conf.d/ssl.conf] action delete (up to date)
+I, [2015-08-31T22:17:36.252687 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.256485 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/conf.d/README] action delete (up to date)
+I, [2015-08-31T22:17:36.256574 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_deflate
+I, [2015-08-31T22:17:36.261896 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.265152 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.269503 #4233]  INFO -- default-centos-64:   * execute[a2enmod deflate] action run (skipped due to not_if)
+I, [2015-08-31T22:17:36.271662 #4233]  INFO -- default-centos-64: Recipe: apache2::default
+I, [2015-08-31T22:17:36.274320 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.279836 #4233]  INFO -- default-centos-64:   * directory[/etc/httpd/conf.d] action create (up to date)
+I, [2015-08-31T22:17:36.284135 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.291831 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.304775 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.312269 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.320423 #4233]  INFO -- default-centos-64:   * template[apache2-conf-charset] action create (up to date)
+I, [2015-08-31T22:17:36.328361 #4233]  INFO -- default-centos-64:   * template[/etc/httpd/ports.conf] action create (up to date)
+I, [2015-08-31T22:17:36.336169 #4233]  INFO -- default-centos-64:   * template[/etc/httpd/sites-available/default] action create (up to date)
+I, [2015-08-31T22:17:36.344934 #4233]  INFO -- default-centos-64:   * template[/etc/httpd/conf.d/tigers.conf] action create (up to date)
+I, [2015-08-31T22:17:36.348084 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:36.364772 #4233]  INFO -- default-centos-64:   * template[/var/www/html/tigers/index.html] action create
+I, [2015-08-31T22:17:36.364863 #4233]  INFO -- default-centos-64:     - update content in file /var/www/html/tigers/index.html from ce837b to e9424f
+I, [2015-08-31T22:17:36.364899 #4233]  INFO -- default-centos-64:     --- /var/www/html/tigers/index.html	2015-09-01 02:16:50.327716725 +0000
+I, [2015-08-31T22:17:36.364946 #4233]  INFO -- default-centos-64:     +++ /tmp/chef-rendered-template20150901-4344-gph2b6	2015-09-01 02:17:33.449266724 +0000
+I, [2015-08-31T22:17:36.364980 #4233]  INFO -- default-centos-64:     @@ -5,5 +5,5 @@
+I, [2015-08-31T22:17:36.365013 #4233]  INFO -- default-centos-64:      10.0.2.15:80
+I, [2015-08-31T22:17:36.365060 #4233]  INFO -- default-centos-64:      <h2> Configuration Management Working Group Rocks! </h2>
+I, [2015-08-31T22:17:36.365094 #4233]  INFO -- default-centos-64:      </body>
+I, [2015-08-31T22:17:36.365127 #4233]  INFO -- default-centos-64:     -</html>x
+I, [2015-08-31T22:17:36.678278 #4233]  INFO -- default-centos-64: 
+I, [2015-08-31T22:17:36.678382 #4233]  INFO -- default-centos-64:     - restore selinux security context
+I, [2015-08-31T22:17:36.700629 #4233]  INFO -- default-centos-64:   * template[/etc/httpd/conf.d/lions.conf] action create (up to date)
+I, [2015-08-31T22:17:36.700729 #4233]  INFO -- default-centos-64:   * directory[/var/www/html/lions] action create (up to date)
+I, [2015-08-31T22:17:36.718277 #4233]  INFO -- default-centos-64:   * template[/var/www/html/lions/index.html] action create
+I, [2015-08-31T22:17:36.718372 #4233]  INFO -- default-centos-64:     - update content in file /var/www/html/lions/index.html from a99595 to d6a5b5
+I, [2015-08-31T22:17:36.718438 #4233]  INFO -- default-centos-64:     --- /var/www/html/lions/index.html	2015-09-01 02:16:50.706906226 +0000
+I, [2015-08-31T22:17:36.718473 #4233]  INFO -- default-centos-64:     +++ /tmp/chef-rendered-template20150901-4344-5xfrqv	2015-09-01 02:17:33.796440221 +0000
+I, [2015-08-31T22:17:36.718507 #4233]  INFO -- default-centos-64:     @@ -5,5 +5,5 @@
+I, [2015-08-31T22:17:36.718540 #4233]  INFO -- default-centos-64:      10.0.2.15:81
+I, [2015-08-31T22:17:36.718608 #4233]  INFO -- default-centos-64:      <h2> Configuration Management Working Group Rocks! </h2>
+I, [2015-08-31T22:17:36.718642 #4233]  INFO -- default-centos-64:      </body>
+I, [2015-08-31T22:17:36.718675 #4233]  INFO -- default-centos-64:     -</html>x
+I, [2015-08-31T22:17:36.981760 #4233]  INFO -- default-centos-64: 
+I, [2015-08-31T22:17:36.984776 #4233]  INFO -- default-centos-64: 
+I, [2015-08-31T22:17:36.987549 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_status
+I, [2015-08-31T22:17:37.001913 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.008257 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.008344 #4233]  INFO -- default-centos-64:   * execute[a2enmod status] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.008396 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_alias
+I, [2015-08-31T22:17:37.032871 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.033007 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/mods-available/alias.load] action create (up to date)
+I, [2015-08-31T22:17:37.033052 #4233]  INFO -- default-centos-64:   * execute[a2enmod alias] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.033094 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_auth_basic
+I, [2015-08-31T22:17:37.033132 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/mods-available/auth_basic.load] action create (up to date)
+I, [2015-08-31T22:17:37.033170 #4233]  INFO -- default-centos-64:   * execute[a2enmod auth_basic] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.033209 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_authn_file
+I, [2015-08-31T22:17:37.036435 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.038994 #4233]  INFO -- default-centos-64:   * execute[a2enmod authn_file] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.039068 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_authz_default
+I, [2015-08-31T22:17:37.043343 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.043432 #4233]  INFO -- default-centos-64:   * execute[a2enmod authz_default] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.044582 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_authz_groupfile
+I, [2015-08-31T22:17:37.052424 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.052513 #4233]  INFO -- default-centos-64:   * execute[a2enmod authz_groupfile] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.052550 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_authz_host
+I, [2015-08-31T22:17:37.052584 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/mods-available/authz_host.load] action create (up to date)
+I, [2015-08-31T22:17:37.053363 #4233]  INFO -- default-centos-64:  (skipped due to not_if)
+I, [2015-08-31T22:17:37.053432 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_authz_user
+I, [2015-08-31T22:17:37.057598 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.062266 #4233]  INFO -- default-centos-64:   * execute[a2enmod authz_user] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.062356 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_autoindex
+I, [2015-08-31T22:17:37.065021 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.071778 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/mods-available/autoindex.load] action create (up to date)
+I, [2015-08-31T22:17:37.080147 #4233]  INFO -- default-centos-64:   * execute[a2enmod autoindex] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.080242 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_dir
+I, [2015-08-31T22:17:37.080278 #4233]  INFO -- default-centos-64:   * template[/etc/httpd/mods-available/dir.conf] action create (up to date)
+I, [2015-08-31T22:17:37.084644 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.084734 #4233]  INFO -- default-centos-64:   * execute[a2enmod dir] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.084771 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_env
+I, [2015-08-31T22:17:37.088860 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.090163 #4233]  INFO -- default-centos-64:   * execute[a2enmod env] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.092460 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_mime
+I, [2015-08-31T22:17:37.098567 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.108869 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/mods-available/mime.load] action create (up to date)
+I, [2015-08-31T22:17:37.109025 #4233]  INFO -- default-centos-64:   * execute[a2enmod mime] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.109062 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_negotiation
+I, [2015-08-31T22:17:37.112344 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.119162 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/mods-available/negotiation.load] action create (up to date)
+I, [2015-08-31T22:17:37.120566 #4233]  INFO -- default-centos-64:   * execute[a2enmod negotiation] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.122056 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_setenvif
+I, [2015-08-31T22:17:37.126780 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.131912 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/mods-available/setenvif.load] action create (up to date)
+I, [2015-08-31T22:17:37.132968 #4233]  INFO -- default-centos-64:   * execute[a2enmod setenvif] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.137553 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_log_config
+I, [2015-08-31T22:17:37.137641 #4233]  INFO -- default-centos-64:   * file[/etc/httpd/mods-available/log_config.load] action create (up to date)
+I, [2015-08-31T22:17:37.140218 #4233]  INFO -- default-centos-64: 
+I, [2015-08-31T22:17:37.140303 #4233]  INFO -- default-centos-64: Recipe: apache2::mod_logio
+I, [2015-08-31T22:17:37.147367 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.147460 #4233]  INFO -- default-centos-64:   * execute[a2enmod logio] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.147497 #4233]  INFO -- default-centos-64: Recipe: apache2::default
+I, [2015-08-31T22:17:37.147578 #4233]  INFO -- default-centos-64:   * execute[a2ensite default] action run (skipped due to not_if)
+I, [2015-08-31T22:17:37.361686 #4233]  INFO -- default-centos-64:  (up to date)
+I, [2015-08-31T22:17:37.461987 #4233]  INFO -- default-centos-64: 
+I, [2015-08-31T22:17:37.462077 #4233]  INFO -- default-centos-64: Running handlers:
+I, [2015-08-31T22:17:37.462112 #4233]  INFO -- default-centos-64: Running handlers complete
+I, [2015-08-31T22:17:37.462145 #4233]  INFO -- default-centos-64: Chef Client finished, 2/62 resources updated in 8.987210016 seconds
+I, [2015-08-31T22:17:38.423457 #4233]  INFO -- default-centos-64: Finished converging <default-centos-64> (0m14.81s).

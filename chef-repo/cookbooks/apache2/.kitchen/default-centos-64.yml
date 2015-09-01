@@ -1,6 +1,6 @@
 ---
 hostname: 127.0.0.1
-port: '2222'
+port: '2201'
 username: vagrant
 ssh_key: "/Users/jamesstallard/dev/chef-repo/cookbooks/apache2/.kitchen/kitchen-vagrant/kitchen-apache2-default-centos-64/.vagrant/machines/default/virtualbox/private_key"
-last_action: verify
+last_action: converge
